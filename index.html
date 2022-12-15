@@ -14,6 +14,7 @@
 <meta name="theme-color" content="#ffffff">
 	</head>
 	<body class="is-preload">
+	
 
 		<!-- Header -->
 			<section id="header">
@@ -155,6 +156,24 @@ renewable electricity from your local Fan!</li>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+    <script>
+  function acceptCookies() {
+    document.getElementById("cookieBanner").style.display = "none";
+    document.cookie = "cookiesAccepted=true; max-age=10";
+  }
+
+  function declineCookies() {
+    window.location.href = "https://octopusenergyreferral.uk/privacypolicy";
+  }
+</script>
+<div class="cookie-overlay p-4 d-none">
+     <div id="cookieBanner">
+  <p>We use cookies to enhance your experience. By continuing to visit you agree to these terms. <button onclick="acceptCookies()">Accept</button><button onclick="declineCookies()">Decline</button></p> 
+  
+</div>
+    </div>
+
+
 
 	</body>
 </html>
