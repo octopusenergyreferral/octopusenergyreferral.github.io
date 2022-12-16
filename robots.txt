@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 Disallow: /cgi-bin/
-Sitemap: https://octopusenergyreferral.uk
+Sitemap: http://octopusenergyreferral.uk/sitemap.xml
