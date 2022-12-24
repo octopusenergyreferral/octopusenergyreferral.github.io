@@ -2848,7 +2848,6 @@ input, select, textarea {
 
 						#header > nav ul li a.active {
 							background: #5c44fb;
-							color:  !important;
 						}
 
 					#header > nav ul li:first-child {
@@ -2879,7 +2878,6 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-		background: ;
 		border-top: 0;
 		color: #c0c0c0;
 		overflow: hidden;
