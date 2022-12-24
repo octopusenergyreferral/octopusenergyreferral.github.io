@@ -84,7 +84,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: ##38144c;
+		background: #38144c;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -1737,7 +1737,7 @@ input, select, textarea {
     right: 0;
     border-radius: 0;
 
-    > div:first-child {
+    div:first-child {
       width: auto;
     }
   }
