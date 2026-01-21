@@ -23,6 +23,7 @@
 		<meta name="twitter:image" content="https://octopusenergyreferral.uk/images/og-social-image.webp">
 		<meta name="keywords" content="Octopus Energy Referral, Octopus Energy, referral code, renewable energy, switch energy supplier, cheap electricity, green energy">
 		<!-- Preload critical resources -->
+		<link rel="preload" href="images/banner.svg" as="image" type="image/svg+xml">
 		<link rel="preload" href="images/avatar.webp" as="image" type="image/webp">
 		<link rel="preload" href="assets/css/main.css" as="style">
 		<!-- Load Google Fonts in HTML with display=swap for faster text rendering -->
@@ -129,7 +130,7 @@
 						<!-- One -->
 							<section id="signup">
 								<div class="image main" data-position="center">
-									<img src="images/banner.svg" alt="Octopus Energy Referral Background">
+									<img src="images/banner.svg" alt="Octopus Energy Referral Background" fetchpriority="high">
 								</div>
 								<div class="container">
 									<header class="major">
