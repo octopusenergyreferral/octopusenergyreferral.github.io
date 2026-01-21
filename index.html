@@ -37,7 +37,7 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
-		<!-- Google Analytics - deferred until user interaction or 3s delay -->
+		<!-- Google Analytics - deferred until meaningful user engagement -->
 		<script>
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
@@ -50,14 +50,26 @@
 				script.async = true;
 				document.head.appendChild(script);
 				gtag('js', new Date());
-				gtag('config', 'G-FLH4N1MKD8');
+				gtag('config', 'G-FLH4N1MKD8', {send_page_view: true});
 			}
 			
-			// Load GA after 3 seconds or on first user interaction
-			setTimeout(loadGA, 3000);
-			['scroll', 'click', 'touchstart', 'keydown'].forEach(function(evt) {
-				window.addEventListener(evt, loadGA, {once: true, passive: true});
-			});
+			// Only load GA after page is fully loaded AND user engages
+			if (document.readyState === 'complete') {
+				setupGAListeners();
+			} else {
+				window.addEventListener('load', setupGAListeners);
+			}
+			
+			function setupGAListeners() {
+				// Load after 5s idle OR on click/form interaction (not scroll)
+				var gaTimer = setTimeout(loadGA, 5000);
+				['click', 'submit', 'touchstart'].forEach(function(evt) {
+					document.addEventListener(evt, function() {
+						clearTimeout(gaTimer);
+						loadGA();
+					}, {once: true, passive: true});
+				});
+			}
 		</script>
 	</head>
 	<body class="is-preload">
@@ -76,7 +88,7 @@
 		<!-- Header -->
 			<section id="header">
 				<header>
-					<span class="image avatar"><img src="images/avatar.webp" alt="Octopus Energy Referral Logo" width="200" height="200" decoding="async" fetchpriority="high"></span>
+					<span class="image avatar"><img src="images/avatar.webp" alt="Octopus Energy Referral Logo" decoding="async" fetchpriority="high"></span>
 					<h1 id="logo"><a href="https://octopusenergyreferral.uk/"> Octopus Energy Referral - £80 Code</a></h1>
 					<p>Receive £80 for switching to Octopus Energy using my <a href="https://share.octopus.energy/wind-gnu-414">Link | £50 from Octopus and £30 from me!</a></p>
 				</header>
@@ -100,16 +112,16 @@
     Octopus Refer A Friend Code</a>
 				<footer>
 					<ul class="icons">
-						<li><a href="https://twitter.com/octopusenergygb" class="icon" aria-label="Follow us on Twitter"><svg class="svg-icon"><use href="#icon-twitter"/></svg><span class="sr-only">Twitter</span></a></li>
-										<li><a href="https://www.facebook.com/groups/octopus.energy.referral.code.link" class="icon" aria-label="Join our Facebook group"><svg class="svg-icon"><use href="#icon-facebook"/></svg><span class="sr-only">Facebook</span></a></li>
-										<li><a href="mailto:code@octopusenergyreferral.uk" class="icon" aria-label="Email us"><svg class="svg-icon"><use href="#icon-envelope"/></svg><span class="sr-only">Email</span></a></li>
+						<li><a href="https://twitter.com/octopusenergygb" class="icon" aria-label="Follow us on Twitter"><svg class="svg-icon" aria-hidden="true"><use href="#icon-twitter"/></svg></a></li>
+						<li><a href="https://www.facebook.com/groups/octopus.energy.referral.code.link" class="icon" aria-label="Join our Facebook group"><svg class="svg-icon" aria-hidden="true"><use href="#icon-facebook"/></svg></a></li>
+						<li><a href="mailto:code@octopusenergyreferral.uk" class="icon" aria-label="Email us"><svg class="svg-icon" aria-hidden="true"><use href="#icon-envelope"/></svg></a></li>
 					</ul>
 				</footer>
 			</section>
 
 		<!-- Wrapper -->
 			<div id="wrapper">
-				<div itemscope itemtype="http://schema.org/FAQPage">
+				<div itemscope itemtype="https://schema.org/FAQPage">
 
 				<!-- Main -->
 					<main id="main">
@@ -164,10 +176,10 @@ renewable electricity from your local Fan!</li>
 <p>Additionally, I am willing to share over half of my referral reward with you, so you will receive an extra £30 from me on top of the credit from Octopus. In total, you can receive £80 in credit for switching to Octopus with my referral.</p>
 									<div class="features">
 <article>
-								<a href="#" class="image"><img src="images/pic01.webp" alt="Light Octopus to Present Energy" width="400" height="400" loading="lazy" decoding="async"></a>
+												<a href="#" class="image"><img src="images/pic01.webp" alt="Light Octopus to Present Energy" width="400" height="400" loading="lazy" decoding="async"></a>
 <div class="inner">
   
-  <div itemprop="mainEntity" itemscope itemtype="http://schema.org/Question">
+  <div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
     <h3 itemprop="name">How to Share Octopus Energy Referral codes?</h3>
 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
       <div itemprop="text"><p>Sharing a referral code is a great way to help friends and family save money on their energy bills.<br><br>
@@ -194,7 +206,7 @@ renewable electricity from your local Fan!</li>
 										<article>
 											<a href="#" class="image"><img src="images/octopus-energy-referral-link.webp" alt="Octopis Energy Referral" width="400" height="303" loading="lazy" decoding="async"></a>
 											<div class="inner">
-												<div itemprop="mainEntity" itemscope itemtype="http://schema.org/Question">
+												<div itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
 												  <h3 itemprop="name">Where can I find an Octopus referral code?</h3>
 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
       <div itemprop="text"><p>If you don't have a referral code my code is <br><b>wind-gnu-414</b> or you can use the links on this page.<br><br>
@@ -220,9 +232,9 @@ renewable electricity from your local Fan!</li>
 												<h3>How many reviews do you have?</h3>
 												<p>We've recently moved off Meta(Facebook) to google reviews.<br><br>From the start of December I've been asking previous switchers to review me!<br><br>
   You can check out my reviews <a href="https://www.google.com/maps/place/£75+Octopus+Energy+Referral+Code/@52.4091595,-1.8427467,17z/data=!3m1!4b1!4m5!3m4!1s0x4870b935782c6f87:0xbc0ad744ab931501!8m2!3d52.4091562!4d-1.840558">here.</a></p>
-  <div itemscope itemtype="http://schema.org/Product">
+  <div itemscope itemtype="https://schema.org/Product">
   <span itemprop="name">Octopus Energy Referral</span>
-  <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+  <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
     <span itemprop="ratingValue">5</span> stars - based on <span itemprop="reviewCount">70</span> reviews
   </div>
 </div>
@@ -288,14 +300,8 @@ renewable electricity from your local Fan!</li>
 </div>
 			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js" defer></script>
-			<script src="assets/js/jquery.scrollex.min.js" defer></script>
-			<script src="assets/js/jquery.scrolly.min.js" defer></script>
-			<script src="assets/js/browser.min.js" defer></script>
-			<script src="assets/js/breakpoints.min.js" defer></script>
-			<script src="assets/js/util.js" defer></script>
-			<script src="assets/js/main.js" defer></script>
+		<!-- Scripts - Lightweight vanilla JS (replaces jQuery + 6 plugins, saves ~106KB) -->
+			<script src="assets/js/main-lite.min.js" defer></script>
     <script>
   function acceptCookies() {
     document.getElementById("cookieBanner").style.display = "none";
