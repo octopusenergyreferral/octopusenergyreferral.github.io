@@ -38,6 +38,19 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
+		<!-- VideoObject Schema for SEO -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "VideoObject",
+			"name": "How to Sign Up to Octopus Energy",
+			"description": "Step-by-step guide on switching to Octopus Energy and claiming your £80 referral credit (£50 from Octopus + £30 from me).",
+			"thumbnailUrl": "https://img.youtube.com/vi/fo8vvdXEUDg/maxresdefault.jpg",
+			"uploadDate": "2026-01-20",
+			"contentUrl": "https://youtu.be/fo8vvdXEUDg",
+			"embedUrl": "https://www.youtube.com/embed/fo8vvdXEUDg"
+		}
+		</script>
 		<!-- Google Analytics - deferred until meaningful user engagement -->
 		<script>
 			window.dataLayer = window.dataLayer || [];
@@ -96,6 +109,7 @@
 				<nav id="nav">
 					<ul>
 						<li><a href="#signup" class="active">Sign Up</a></li>
+						<li><a href="#video-guide">How to Sign Up</a></li>
 						<li><a href="#perks">Perks of Octopus Energy</a></li>
 						<li><a href="#faq">Frequently Asked Questions</a></li>
 						<li><a href="#contact">Contact</a></li>
@@ -145,6 +159,29 @@
 										</a>
 									</div>
 									<p style="margin-top: 0;">As an official member of the Octopus Energy Affiliate Program, I'm backed by Octopus Energy to refer you to one of the best providers on the market.</p>
+								</div>
+							</section>
+
+						<!-- Video Guide -->
+							<section id="video-guide">
+								<div class="container">
+									<h3>How to Sign Up to Octopus Energy</h3>
+									<p>Watch my step-by-step guide on how to switch to Octopus Energy and claim your £80 credit:</p>
+									<div id="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 2em 0; cursor: pointer;" onclick="loadVideo()">
+										<img src="https://img.youtube.com/vi/fo8vvdXEUDg/maxresdefault.jpg" alt="How to Sign Up to Octopus Energy - Click to play" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+										<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 68px; height: 48px; background: red; border-radius: 14px; display: flex; align-items: center; justify-content: center;">
+											<div style="border-style: solid; border-width: 12px 0 12px 20px; border-color: transparent transparent transparent white; margin-left: 4px;"></div>
+										</div>
+									</div>
+									<script>
+										function loadVideo() {
+											var container = document.getElementById('video-container');
+											container.innerHTML = '<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 8px;" src="https://www.youtube.com/embed/fo8vvdXEUDg?si=i85l4oU08h2OwV2m&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+											container.style.cursor = 'default';
+											container.onclick = null;
+										}
+									</script>
+									<p style="text-align: center;"><input type="button" class="primary" style="color:black" onclick="location.href='https://share.octopus.energy/wind-gnu-414'" value="Sign Up Now & Get £80"></p>
 								</div>
 							</section>
 
