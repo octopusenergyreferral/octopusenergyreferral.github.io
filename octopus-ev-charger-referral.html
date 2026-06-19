@@ -96,7 +96,7 @@
 								<div class="container">
 									<header class="major">
 										<h2>Octopus EV Referral</h2>
-										<p><input type="button" class="primary" style="color:black" onclick="location.href='https://tech.referrals.octopus.energy/uzwAQjWW'" value="Get a £25 Gift Card"></p>
+										<p><a class="button primary" style="color:black" href="https://tech.referrals.octopus.energy/uzwAQjWW" target="_blank" rel="noopener noreferrer">Get a £25 Gift Card</a></p>
 										<p style="font-size: 0.85em;">Always check Octopus for the latest charger models, pricing, tariff details and eligibility before ordering.</p>
 									</header>
 									<p style="margin-bottom: 0;">Thinking about getting an EV charger installed at home? If you use my dedicated referral link, we'll both get a <strong>£25 gift card of your choice</strong> (from top retailers, restaurants, or even a Visa cash card!). The whole process is super straightforward—Octopus takes care of the quote, the installation, and helping you pick the right charger. Plus, you'll benefit from cutting your charging costs, simple public charging with Electroverse, and installation from the UK's most awarded energy supplier.</p>
@@ -194,7 +194,7 @@
 								<div class="container" style="text-align: center;">
 									<h3>Octopus Energy Referral</h3>
 									<p>If you're switching your energy to Octopus as well, you can still use my normal referral link and get <strong>£50 from Octopus plus £30 from me</strong> once your switch is complete.</p>
-									<p><input type="button" class="primary" style="color:black" onclick="location.href='https://christophergunn.octopus.energy/'" value="Sign Up to Octopus Energy"></p>
+									<p><a class="button primary" style="color:black" href="https://christophergunn.octopus.energy/" target="_blank" rel="noopener noreferrer">Sign Up to Octopus Energy</a></p>
 									<p style="font-size: 0.85em;">Existing customer? Find out how you can benefit too. T&amp;Cs apply (only one switching offer per household).</p>
 								</div>
 							</section>
@@ -249,8 +249,9 @@
 			}
 
 			function declineCookies() {
-				window.location.href = "https://octopusenergyreferral.uk/privacypolicy";
-			}
+    document.getElementById("cookieBanner").style.display = "none";
+    document.cookie = "cookiesAccepted=false; max-age=10";
+  }
 		</script>
 		<div class="cookie-overlay p-4 d-none">
 			<div id="cookieBanner">

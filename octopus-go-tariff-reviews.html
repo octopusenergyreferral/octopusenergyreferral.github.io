@@ -68,7 +68,7 @@
 								<div class="container">
 									<header class="major">
 										<h2>Octopus Energy Referral</h2>
-										<p><input type="button" class="primary" style="color:black" onclick="location.href='https://christophergunn.octopus.energy/'" value="Sign Up to Octopus Energy" ></p>
+										<p><a class="button primary" style="color:black" href="https://christophergunn.octopus.energy/" target="_blank" rel="noopener noreferrer">Sign Up to Octopus Energy</a></p>
 										<p style="font-size: 0.85em;">Existing customer? Find out how you can benefit too. T&Cs apply (only one switching offer per household).</p>
 									</header>
 									<p style="margin-bottom: 0;"><strong>Switch to the UK’s most awarded energy supplier!</strong><br><br>Switch to Octopus Energy and you’ll get £50 credit once your switch is complete. Existing customer? Find out how you can benefit too. T&Cs apply (only one switching offer per household).<br><br>If you use my referral link you'll receive an additional £30 from me directly once your switch is verified! Click my referral link to begin the process of switching to Octopus Energy.</p>
@@ -124,7 +124,7 @@
 											<div class="inner">
 												<h4>How do you send the extra payment?</h4>
 												<p>We sent the extra payment once you've completed your switch to Octopus Energy and Octopus Energy has credited you! The choice of payment is up to you! Still haven't signed up? use the link below!</p>
-												<input type="button" class="primary" onclick="location.href='https://christophergunn.octopus.energy/'" value="Sign Up to Octopus Energy" style="color:#210c22;">
+												<a class="button primary" style="color:#210c22;" href="https://christophergunn.octopus.energy/" target="_blank" rel="noopener noreferrer">Sign Up to Octopus Energy</a>
 												<p style="font-size: 0.85em;">Existing customer? Find out how you can benefit too. T&Cs apply (only one switching offer per household).</p>
 											</div>
 
@@ -137,7 +137,7 @@
 							<section id="contact">
 								<div class="container">
 									<h3>Contact Me</h3>
-									<p>Once you've signed up, please reach out to us so we can transfer the additional £30 to you through your preferred method, such as bank transfer, PayPal, or an Amazon gift card.</p>
+									<p>Once you've signed up, please contact me after the referral is verified. I can send the additional £30 by PayPal or Amazon gift card.</p>
 									<form method="post" action="https://formspree.io/f/xjvdbbgg">
 										<div class="row gtr-uniform">
 											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /style="color:black;"></div>
@@ -185,7 +185,8 @@
   }
 
   function declineCookies() {
-    window.location.href = "https://octopusenergyreferral.uk/privacypolicy";
+    document.getElementById("cookieBanner").style.display = "none";
+    document.cookie = "cookiesAccepted=false; max-age=10";
   }
 </script>
 <div class="cookie-overlay p-4 d-none">

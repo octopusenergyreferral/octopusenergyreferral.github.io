@@ -68,7 +68,7 @@
 								<div class="container">
 									<header class="major">
 										<h2>Octopus Energy Business Referral Code</h2>
-										<p><input type="button" class="primary" style="color:black" onclick="location.href='https://christophergunnbusiness.octopus.energy'" value="Sign Up to Octopus Energy" ></p>
+										<p><a class="button primary" style="color:black" href="https://christophergunnbusiness.octopus.energy" target="_blank" rel="noopener noreferrer">Sign Up to Octopus Energy</a></p>
 										<p style="font-size: 0.85em;">Existing customer? Find out how you can benefit too. T&Cs apply (only one switching offer per household).</p>
 									</header>
 									<p style="margin-bottom: 0;">Octopus is the one of the top leading energy providers on the market. <br><br> They're also offering businesses £75 when you join them. To entice this offer if you use my referral link you'll receive an additional £30 on top for switching. Click my referral link to Octopus Energy to begin switching your business. Existing customer? Find out how you can benefit too. T&Cs apply (only one switching offer per household).</p>
@@ -113,7 +113,7 @@ Unfortunately, Octopus Energy only serves businesses within the UK at this time.
 											<div class="inner">
 												<h4>How do you send the extra payment?</h4>
 												<p>We send the extra payment once you've completed your switch to Octopus Energy and Octopus Energy has credited you! <br><br>The choice of payment is up to you! Still haven't signed up? use the link below!</p>
-												<input type="button" class="primary" onclick="location.href='https://christophergunnbusiness.octopus.energy'" value="Sign Up to Octopus Energy" style="color:#210c22;">
+												<a class="button primary" style="color:#210c22;" href="https://christophergunnbusiness.octopus.energy" target="_blank" rel="noopener noreferrer">Sign Up to Octopus Energy</a>
 												<p style="font-size: 0.85em;">Existing customer? Find out how you can benefit too. T&Cs apply (only one switching offer per household).</p>
 											</div>
 
@@ -126,7 +126,7 @@ Unfortunately, Octopus Energy only serves businesses within the UK at this time.
 							<section id="contact">
 								<div class="container">
 									<h3>Contact Me</h3>
-									<p>Once you've signed up, please reach out to us so we can transfer the additional £30 to you through your preferred method.<br><br> Such as bank transfer, PayPal, or an Amazon gift card.</p>
+									<p>Once you've signed up, please contact me after the referral is verified.<br><br>I can send the additional £30 by PayPal or Amazon gift card.</p>
 									<form method="post" action="https://formspree.io/f/xjvdbbgg">
 										<div class="row gtr-uniform">
 											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" style="color:black;"></div>
@@ -173,7 +173,8 @@ Unfortunately, Octopus Energy only serves businesses within the UK at this time.
   }
 
   function declineCookies() {
-    window.location.href = "https://octopusenergyreferral.uk/privacypolicy";
+    document.getElementById("cookieBanner").style.display = "none";
+    document.cookie = "cookiesAccepted=false; max-age=10";
   }
 </script>
 <div class="cookie-overlay p-4 d-none">
