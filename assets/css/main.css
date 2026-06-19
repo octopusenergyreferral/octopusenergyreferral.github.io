@@ -19,6 +19,18 @@ header.major h1:after,header.major h2:after,#main h2:after{background:linear-gra
 #header>footer .icons li a{color:#8cc9f0}
 
 @media screen and (min-width:1025px){
-	#header{justify-content:flex-start!important}
+	#header{justify-content:flex-start!important;width:22em!important}
+	#wrapper{padding-right:22em!important}
+	#header>header .avatar{width:6.25em!important}
+	#header>header #logo{font-size:1.32em!important;max-width:14em!important}
+	#header>header p{font-size:.92em!important;max-width:20em!important}
+	#header>nav ul li a{font-size:.96em!important}
 	#header>footer{margin-top:auto!important;padding-bottom:1.35em!important}
+}
+
+@media screen and (min-width:1281px){
+	#header{width:24em!important}
+	#wrapper{padding-right:24em!important}
+	#header>header .avatar{width:6.75em!important}
+	#header>header #logo{font-size:1.4em!important}
 }
