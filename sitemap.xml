@@ -1,15 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+            http://www.google.com/schemas/sitemap-image/1.1
+            http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
 
 
 <url>
   <loc>https://octopusenergyreferral.uk/</loc>
-  <lastmod>2026-01-25T12:00:00+00:00</lastmod>
+  <lastmod>2026-06-19T12:00:00+00:00</lastmod>
   <priority>1.00</priority>
+  <image:image>
+    <image:loc>https://octopusenergyreferral.uk/images/og-social-image.webp</image:loc>
+    <image:title>Octopus Energy Referral Code 2026 - Get £80</image:title>
+  </image:image>
+  <image:image>
+    <image:loc>https://octopusenergyreferral.uk/images/octopus-energy-referral-program.webp</image:loc>
+    <image:title>Proud to refer Octopus Energy</image:title>
+  </image:image>
+  <image:image>
+    <image:loc>https://octopusenergyreferral.uk/images/octopus-energy-referral-link.webp</image:loc>
+    <image:title>Octopus Energy referral link</image:title>
+  </image:image>
+  <image:image>
+    <image:loc>https://octopusenergyreferral.uk/images/octopus-energy-signup-video-thumbnail.webp</image:loc>
+    <image:title>How to sign up to Octopus Energy</image:title>
+  </image:image>
 </url>
 <url>
   <loc>https://octopusenergyreferral.uk/octopus-energy-contact-number</loc>
@@ -33,7 +52,7 @@
 </url>
 <url>
   <loc>https://octopusenergyreferral.uk/octopus-energy-referral-code</loc>
-  <lastmod>2026-01-25T12:00:00+00:00</lastmod>
+  <lastmod>2026-06-19T12:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
